@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+*{
+    font-family: 'roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body,html{
+    background-image: linear-gradient(to bottom,#6A8BCD,#4B5B9D,#061033);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+section{
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    width: 320px;
+    height: 600px;
+    
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.363);
+}
+
+.imagem-fundo{
+    background: black url('../imagens/pexels-trace-hudson-2797752\ \(1\).jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 50%;
+}
+.form-area{
+    padding: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+h1{
+    text-align: center;
+    font-size: 35px;
+}
+p{
+    margin: 5px 0px;
+    font-size: 1.3em;
+}
+span{
+    background-color: #5468AA;
+    color: white;
+    height: 35px;
+    padding: 3px;
+    border-radius: 8px 0px 0px 8px; 
+    
+}
+input{
+    padding: 1px;
+    border-radius:0px 8px 8px 0px ;
+    box-shadow: 0px 0px 0px 7px #5468AA;
+    transform: translatey(-5px); 
+}
+
+
+.button{
+    font-size: 19px;
+    padding: 7px 80px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #5468AA;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #8da1e4;
+    color: #000;
+    font-weight: bolder;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    
+}
+.links_externos{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+    
+.links_externos:hover{
+    text-decoration: underline;
+    font-size: 17px;
+    color: #728bdf;
+}

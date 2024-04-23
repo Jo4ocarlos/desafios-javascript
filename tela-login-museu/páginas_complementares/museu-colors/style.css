@@ -1,0 +1,300 @@
+/* Estilo geral */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+/* Estilo do Cabeçalho */
+.header {
+  background-color: #061033;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding: 10px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 90px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+ 
+.menu_area{
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 70px;
+}
+
+/*area para analisaaaaaaar*/
+
+.header_nav ul a {
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header_nav ul a:hover {
+  background-color: rgba(255, 255, 255, 0.161);
+}
+
+/* Estilo da seção de boas-vindas */
+
+.welcome-section {
+  background-image: url("imagens/azul.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.welcome-content {
+  font-family: 'Lobster', 'cursive';
+  text-align: center;
+  color: white;
+  font-size: 4em;
+
+
+}
+
+.welcome-subtitle {
+  font-size: 0.7em;
+}
+
+
+
+/* Estilo dos cartões de atração */
+.attraction {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  background-color: #024102;
+  color: white;
+  text-align: center;
+  gap: 60px;
+}
+
+/* Estilo dos cards de atrações */
+.attraction-card {
+  background-color: #061033;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  padding: 50px;
+  transition: background-color 1s;
+}
+
+.attraction-card img {
+  width: 80%;
+  height: 80%;
+
+}
+
+.attraction-card h3 {
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
+.attraction-card p {
+  font-size: 14px;
+  color: #888;
+}
+
+.attraction-card:hover {
+  background-color: #F7F2FF;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Estilo da seção de contatos */
+.contatos {
+  text-align: left;
+  background-image: linear-gradient(to top, #6A8BCD, #4B5B9D);
+  height: 90vh;
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contatos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+  
+}
+
+.contatos-addres {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 50px;
+
+
+}
+.contatos-addres a {
+  color: #fff;
+  font-weight: bolder;
+  text-decoration: none;
+
+}
+
+.contatos-addres a:hover {
+  text-decoration: underline;
+  background-color: #00000044;
+}
+
+.contatos h2 {
+  font-size: 2em;
+  margin-top: 50px;
+
+}
+
+/* Estilo do footer */
+footer {
+  background-color: #061033;
+  color: #fff;
+  padding: 20px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.social-icons img {
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+/* Estilo responsivo */
+
+
+.attraction {
+
+  animation: fundoAlternando 6s linear infinite alternate;
+  /* Altere a duração e as cores conforme necessário */
+}
+
+/* Define a animação de alternância de fundo */
+@keyframes fundoAlternando {
+  0% {
+    background-color: #024102;
+    /* Primeira cor de fundo */
+  }
+
+  100% {
+    background-color: #061033;
+    /* Segunda cor de fundo */
+  }
+}
+
+/* Estilo responsivo para telas menores que 560px */
+@media screen and (max-width: 720px) {
+  .menu_area {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .men {
+    display: block;
+  }
+
+  .header_nav ul {
+    list-style: none;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 60vw;
+    height: 92vh;
+    background: #061033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+    transform: translateX(110%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .header_nav ul.active {
+    transform: translateX(0);
+  }
+
+  .header_nav ul a {
+    padding: 50px;
+  }
+
+  .header_nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.161);
+  }
+
+  .welcome-content {
+    font-size: 2em;
+  }
+
+  .attraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    height: auto;
+    background-color: #024102;
+    color: white;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .contatos {
+    height: auto;
+    color: white;
+    padding: 50px 0px;
+    font-size: 1.2em;
+  }
+  .contatos-content {
+    margin-left: 5%;
+  }
+  .contatos-addres {
+    gap: 20px;
+  }
+  iframe{
+    width: 300px;
+
+  }
+}

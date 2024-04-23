@@ -1,0 +1,128 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section class="modal-area">
+        <div class="modal">
+            <div class="modal_title">
+                <h4>Descrição do projeto!</h4>
+                <button class="close"><span class="material-symbols-outlined" id="menuIcon">close</span></button>
+            </div>
+            <p>
+                Este formulário esta consumindo os dados da API ViaCep para autocompletar os campos de endereço, fique a vontade para testar um CEP existente. <br>
+                Ao clicar em ENVIAR, você será redirecionado para uma tela de login deste projeto.
+            </p>
+        </div>
+
+    </section>
+    <main>
+        <form action="cadastro.php">
+          <header class="form-header">
+            <h1>Cadastre-se</h1>
+          </header>
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" name="nome" id="nome" minlength="5">
+                </div>
+
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" pattern="[0-9]{11}">
+                </div>
+
+                <div>
+                    <label for="dia">Data de Nascimento:</label>
+                    <input type="date" name="dia" id="dia">
+                </div>
+
+                <div>
+                    <label for="cell">Celular:</label>
+                    <input type="number" name="cell" id="cell">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email"  autocomplete="email">
+                </div>
+            </fieldset>
+
+            <fieldset class="address-area">
+                <legend>Endereço</legend>
+                <div>
+                    <label for="cep">CEP: </label><input type="number" name="cep" id="cep" minlength="8" required>
+                </div>
+                <div>
+                    <label for="estado">Estado:</label>
+                    <select name="estado" id="estado" data-input>
+                        <option selected>Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cidade">Cidade: </label><input type="text" name="cidade" id="cidade" data-input>
+                </div>
+                <div>
+                    <label for="rua">Rua: </label><input type="text" name="rua" id="rua" data-input>
+                </div>
+                <div>
+                    <label for="numero">Bairro:</label><input type="text" name="bairro" id="bairro" data-input>
+                </div>
+                <div>
+                    <label for="numero">Número:</label><input type="number" name="numero" id="numero" data-input>
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="checkbox-group">
+              <legend>Preferências</legend>
+                <div>
+                  <input type="checkbox" id="noticias" name="noticias">
+                  <label for="noticias">Receber notificações por e-mail</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="promocoes" name="promocoes">
+                  <label for="promocoes">Receber notificações por SMS</label>
+                </div>
+            </fieldset>
+            <!-- ... outros campos de entrada ... -->
+          
+          <a href="../páginas_complementares/tela-login/index.html"class="btn-submit">Enviar</a>
+        </form>
+    </main>
+</body>
+</html>
