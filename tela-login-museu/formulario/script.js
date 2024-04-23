@@ -87,5 +87,5 @@ closeModal.addEventListener("click", () => {
     fecharModal();
 });
 
-// Fechar o modal após 9 segundos
-setTimeout(fecharModal, 9000);
+// Fechar o modal após 11 segundos
+setTimeout(fecharModal, 11000);
