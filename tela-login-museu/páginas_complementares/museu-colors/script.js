@@ -1,6 +1,7 @@
+// Seleção de elementos
 const menuIcon = document.getElementById("menuIcon");
 const headerNav = document.querySelector("ul");
-const links = document.querySelectorAll('.men a');
+const links = document.querySelectorAll('menu a');
 
 let isMenuOpen = false;
 
