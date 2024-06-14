@@ -1,2 +1,2 @@
-# desafios-javascript
+# Desafios JavaScript
  Exercicíos em JS
