@@ -37,13 +37,14 @@ multiplicationForm.addEventListener("submit", event => {
     const multiplicationNumber = Number(numberInput.value);
     const multiplicatorNumber = Number(multiplicationInput.value);
 
-    if (multiplicatorNumber < 0 || multiplicatorNumber > 100) {
-        alert("Digite um número de 0 a 100");
+    if (multiplicationNumber < 0 || multiplicatorNumber > 100) {
+        alert("Digite um número entre 0 e 100");
         return;
     }
 
     if (!multiplicationNumber || !multiplicatorNumber) {
-        alert("Por favor, digite um número");
+        alert("Por favor, digite um número válido");
+        return;
     } else {
         operation(multiplicationNumber, multiplicatorNumber);
         multiplicationTitle.textContent = `${multiplicationNumber}`;
