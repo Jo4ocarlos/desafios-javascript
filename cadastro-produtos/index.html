@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nunes Sports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Nunes Sports</h1>
+  
+  <!-- Formulário de Produto -->
+  <div class="form-container">
+    <form id="product-form">
+      <label for="input-name">Nome do Produto</label>
+      <input type="text"  class="input-name" required>
+      
+      <label for="input-code">Código do Produto</label>
+      <input type="text"  class="input-code"  required>
+      
+      <label for="input-description">Descrição do Produto</label>
+      <textarea class="input-description"  required></textarea>
+      
+      <label for="input-price">Preço</label>
+      <input type="number" class="input-price" required min="0" step="0.01">
+      
+      <button class="submit-btn">Adicionar Produto</button>
+      <button type="button" class="cancel-btn hide">Cancelar edição</button>
+    </form>
+  </div>
+
+  <!-- feedback visual -->
+  <div id="feedback-message" class="hide"></div>
+
+  <!-- Tabela de Produtos -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome do Produto</th>
+          <th>Código</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--  Produtos adicionados dinamicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
