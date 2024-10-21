@@ -57,15 +57,16 @@
 
     .carousel-mobile {
         display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
-        height: 100vh; /* Altura total da tela */
-        overflow: hidden; /* Oculta partes que saem do contêiner */
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        overflow: hidden; 
     }
     
     .carousel-item {
         width: 100%; /* Largura total do contêiner */
         height: 100%; /* Altura total do contêiner */
+        background-color: #3962db;
     }
     
     .carousel-item.mobile-item {
