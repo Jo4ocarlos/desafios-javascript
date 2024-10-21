@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+:root {
+    --cor0: #FFF;
+    --cor3: #000;
+    --font-padrao: 'Roboto', sans-serif;
+    --font-titulo-secao: 'Nerko One', 'cursive';
+
+}
+
+/*Estilos gerais*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: background-color 2.3s;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor3);
+    font-family: var(--font-padrao);
+    color: var(--cor0);
+    transition: color 1.5s;
+    
+
+}
+
+/* Estilos gerais do header */
+.header {
+    background-color: #3962db;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Certifique-se de que o header esteja acima de outros elementos */
+    padding: 10px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Organiza logo e menu à esquerda/direita */
+}
+
+/* Ajusta o logo para redimensionar adequadamente no mobile */
+.logo img {
+    height: 80px;
+    max-width: 100%; /* Garante que o logo se ajuste ao espaço */
+}
+
+/* Esconde o checkbox que controla o menu */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Esconde o menu desktop no mobile */
+.menu_area {
+    display: none;
+}
+
+/* Define o estilo do menu para desktop */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+}
+
+/* Links de navegação */
+.header_nav ul a {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header_nav ul a:hover {
+    background-color: #d3cfcf;
+    color: #000;
+}
+/*Estilos da seção inical/apresentação*/
+.apresentacao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    transition: background-image 2.3s;
+    overflow: hidden; /* Impede a rolagem se algo vazar */
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* A largura total da janela */
+    overflow: hidden; /* Impede a rolagem se algo vazar */
+    position: relative;
+}
+
+.carousel-mobile {
+    display: none;
+}
+
+.carousel-inner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Garante que cada item ocupe 100% da largura do contêiner sem causar rolagem */
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 50px;
+    z-index: 1;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+/* Seção 'Sobre Nós' desktop */
+.sobre-nos {
+    background-color: #3962db;
+    padding: 60px 0px;
+}
+
+.sobre-nos-cards {
+    display: flex;
+    background-color: #d3cfcf;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 0;
+}
+
+.card {
+    background-color: #d7903c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 20%;
+    /* Para três cards alinhados */
+    padding: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    /* Altura fixa para as imagens */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-titulo {
+    font-size: 1.5em;
+    color: #FFF;
+    margin: 15px 0;
+}
+
+.card-descricao {
+    font-size: 1em;
+    color: #FFF;
+    font-weight: bolder;
+}
+
+/* Estilização da seção sobre o colégio e proposta pedagógica */
+.colegio-informacoes,
+.colegio-informacoes-proposta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.colegio-texto-sobre,
+.colegio-texto-proposta {
+    max-width: 50%;
+    text-align: left;
+}
+
+.colegio-titulo-sobre,
+.colegio-titulo-proposta {
+    font-size: 2.5em;
+    color: #FFF;
+}
+
+
+.borda {
+    width: 700px;
+    height: 4px;
+    background-color: #d7903c;
+    margin: 15px 0;
+}
+
+.colegio-descricao-sobre,
+.colegio-descricao-proposta {
+    font-size: 1.2em;
+    color: #FFF;
+    line-height: 1.6;
+}
+
+/* Estilo da galeria (reutilizado para ambas as seções) */
+.colegio-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 30%;
+}
+
+.colegio-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.colegio-img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 250px;
+}
+
+.colegio-img:nth-child(2),
+.colegio-img:nth-child(3) {
+    height: 170px;
+}
+
+.colegio-img:hover {
+    transform: scale(1.20);
+}
+
+
+/* segmentos   */
+.segmentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 0px;
+    background-color: #d3cfcf;
+}
+
+.segmento-conteudo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.segmentos-imagem img {
+    width: 100%;
+    height: 80%;
+
+}
+
+.segmentos-detalhes {
+    max-width: 60%;
+}
+
+.segmentos-titulo {
+    font-size: 2.9em;
+    color: #2a47a8;
+    text-shadow: #000;
+    text-align: center;
+}
+
+
+.segmentos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.segmento-card {
+    background-color: var(--segmento-cor);
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease;
+}
+
+.segmento-card:hover {
+    background-color: #333;
+    color: #FFF;
+}
+
+.segmento-nome {
+    font-size: 1.5em;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.segmento-descricao {
+    font-size: 1em;
+    color: #FFF;
+    line-height: 1.5;
+}
+
+/* Call to Action */
+.cta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d7903c;
+    /* Cor de fundo do CTA */
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #FFF;
+}
+
+.cta-texto {
+    max-width: 50%;
+}
+
+.cta-titulo {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.cta-descricao {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+.botao {
+    background-color: #d3cfcf;
+    padding: 15px 30px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-inscricao:hover {
+    background-color: #333;
+}
+/* Diferenciais */
+.diferenciais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3962db;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.diferenciais-titulo {
+    font-size: 2.9em;
+    text-align: center;
+}
+
+.diferenciais-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: 50px 0;
+}
+
+
+.diferenciais-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15px;
+    background-color: #d7903c;
+    width: 250px; /* Aumentei o tamanho do card */
+    height: 150px; /* Aumentei a altura do card */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0; 
+}
+
+.diferenciais-item img {
+    width: 70px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Contato */
+.contatos {
+    padding: 100px 0px;
+    background-color: #f9f9f9;
+  }
+  
+  .contatos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contatos-header {
+    margin-bottom: 30px;
+  }
+  
+  .contatos-titulo {
+    font-size: 2.5rem;
+    text-align: left;
+    color: #2a47a8;
+  }
+  
+  .contatos-subtitulo {
+    font-size: 1.3rem;
+    text-align: left;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .contatos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #333;
+  }
+  
+  .contatos-form {
+    width: 45%;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d7903c;
+    border-radius: 4px;
+  }
+  
+  .btn-enviar {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #d7903c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #2a47a8;
+  }
+  
+  .contatos-info {
+    text-align: right;
+    width: 45%;
+  }
+  
+  .contatos-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contatos-info p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .contatos-mapa {
+    margin-top: 30px;
+  }
+  
+  .contatos-mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+  }
+  
+
+/*Estilos rodapé*/
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #3962db;
+}
+
+.rodape_sociais {
+    margin-bottom: 20px;
+}
+
+.rodape_sociais a {
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+
+
+.rodape_sociais img {
+    width: 50px;
+    background-color: var(--cor0);
+    border-radius: 100%;
+    transition: padding 1.3s;
+}
+
+.rodape_sociais img:hover {
+    border: 2px solid var(--cor0);
+    padding: 3px;
+
+}
+
+.rodape_direitos {
+    font-size: 14px;
+}

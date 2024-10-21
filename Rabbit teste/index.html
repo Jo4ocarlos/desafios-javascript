@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Rabbit</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="shortcut icon" href="imagens/meu-mundo.png">
+    <script src="script/carousel.js" defer></script>
+    <script src="script/menuHamburguer.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#home"><img src="imagens/logo-c.png" alt="logo"></a>
+        </div>
+    
+        <nav class="header_nav">
+            <div class="menu_area">
+                <input type="checkbox" name="menu" id="menu">
+                <label for="menu" id="menuLabel">
+                    <span class="material-symbols-outlined" id="menuIcon">menu</span>
+                </label>
+            </div>
+            <menu>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Colégio</a></li>
+                    <li><a href="#segmento">Segmentos</a></li>
+                    <li><a href="#diferencial">Diferenciais</a></li>
+                    <li><a href="#contatos">Contato</a></li>
+                </ul>
+            </menu>
+        </nav>
+    
+        <div class="apresentacao_links">
+            <a class="botao" href="https://www.linkedin.com/in/jo%C3%A3o-carlos-de-almeida-silva-724579171/" target="_blank">Matricule-se</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="apresentacao" id="home">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item desktop-item">
+                        <img src="imagens/banner2.png" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item desktop-item">
+                        <img src="imagens/banner1.png" alt="Slide 2">
+                    </div>
+                </div>
+        
+                <!-- Controles de navegação -->
+                <button class="prev" onclick="moveSlide(-1, 'desktop')">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, 'desktop')">&#10095;</button>
+            </div>
+        
+            <!-- Indicadores de pontos -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(0, 'desktop')"></span>
+                <span class="dot" onclick="currentSlide(1, 'desktop')"></span>
+            </div>
+        
+            <!--Mobile -->
+            <div class="carousel-mobile">
+                <div class="carousel-inner">
+                    <div class="carousel-item mobile-item">
+                        <img src="imagens/banner- MOBILE.png" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item mobile-item">
+                        <img src="imagens/banner- MOBILE2.png" alt="Slide 2">
+                    </div>
+                </div>
+        
+                <!-- Controles de navegação -->
+                <button class="prev" onclick="moveSlide(-1, 'mobile')">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, 'mobile')">&#10095;</button>
+            </div>
+        </section>
+        
+
+        <section class="sobre-nos" id="sobre">
+            <div class="sobre-nos-cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="caminho-da-imagem/semi-integral.jpg" alt="Período Semi e Integral" class="card-img">
+                    </div>
+                    <h3 class="card-titulo">Período Semi e Integral</h3>
+                    <p class="card-descricao">Oferecemos períodos semi e integral para melhor atender à rotina dos alunos e famílias.</p>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="caminho-da-imagem/educacao-tecnologica.jpg" alt="Educação Tecnológica" class="card-img">
+                    </div>
+                    <h3 class="card-titulo">Educação Tecnológica</h3>
+                    <p class="card-descricao">Nossa escola integra ferramentas tecnológicas inovadoras ao processo pedagógico.</p>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="caminho-da-imagem/cursos-extracurriculares.jpg" alt="Cursos extracurriculares" class="card-img">
+                    </div>
+                    <h3 class="card-titulo">Cursos Extracurriculares</h3>
+                    <p class="card-descricao">Oferecemos uma variedade de cursos extracurriculares para estimular múltiplas habilidades.</p>
+                </div>
+            </div>
+
+            <!-- Seção adicional sobre o colégio -->
+            <div class="colegio-informacoes">
+                <div class="colegio-texto-sobre">
+                    <h2 class="colegio-titulo-sobre">Colégio João Almeida</h2>
+                    <div class="borda"></div>
+                    <p class="colegio-descricao-sobre">O Colégio João Almeida é uma instituição dedicada à excelência
+                        educacional, com foco no desenvolvimento integral dos alunos. Contamos com uma infraestrutura
+                        moderna, professores qualificados e um ambiente que incentiva o aprendizado e o crescimento
+                        pessoal.</p>
+                </div>
+                <div class="colegio-galeria">
+                    <img src="imagens/img1.jpg" alt="Imagem Estrutura 1" class="colegio-img">
+                    <img src="imagens/img2.jpg" alt="Imagem Estrutura 2" class="colegio-img" >
+                    <img src="imagens/img3.jpg" alt="Imagem Estrutura 3" class="colegio-img">
+        
+                   
+                    
+                </div>
+            </div>
+
+
+
+
+            <!-- Seção sobre proposta pedagógica -->
+            <div class="colegio-informacoes-proposta">
+                <div class="colegio-galeria">
+                    
+                    <img src="imagens/img2.jpg" alt="Imagem Estrutura 2" class="colegio-img" >
+                    <img src="imagens/img1.jpg" alt="Imagem Estrutura 1" class="colegio-img">
+                    <img src="imagens/img3.jpg" alt="Imagem Estrutura 3" class="colegio-img">
+                </div>
+                <div class="colegio-texto-proposta">
+                    <h2 class="colegio-titulo-proposta">Proposta Pedagógica</h2>
+                    <div class="borda"></div>
+                    <p class="colegio-descricao-proposta">Nossa proposta pedagógica é focada no desenvolvimento integral
+                        dos alunos, unindo o ensino tradicional à inovação tecnológica. Acreditamos que a educação vai
+                        além do conteúdo acadêmico, por isso incentivamos o uso de ferramentas tecnológicas para
+                        estimular o pensamento crítico e criativo. Ao mesmo tempo, promovemos a empatia e o trabalho em
+                        equipe, preparando os alunos para enfrentar os desafios do mercado de trabalho com habilidades
+                        técnicas e socioemocionais, formando cidadãos conscientes e preparados para transformar o mundo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="segmentos" id="segmento">
+            <h2 class="segmentos-titulo">Segmentos</h2>
+            <div class="borda"></div>
+            <div class="segmento-conteudo">
+                <div class="segmentos-imagem">
+                    <img src="imagens/estudante.png" alt="Estudante">
+                </div>
+                <div class="segmentos-detalhes">
+
+                    <div class="segmentos-grid">
+                        <!-- Educação Infantil -->
+                        <div class="segmento-card" style="--segmento-cor:#d7903c;">
+                            <h3 class="segmento-nome">Educação Infantil</h3>
+                            <p class="segmento-descricao">Focada no desenvolvimento cognitivo, motor e emocional, com
+                                atividades lúdicas.</p>
+                        </div>
+                        <!-- Ensino Fundamental -->
+                        <div class="segmento-card" style="--segmento-cor:#3962db;">
+                            <h3 class="segmento-nome">Ensino Fundamental</h3>
+                            <p class="segmento-descricao">Formação sólida nas áreas de conhecimento, com foco no
+                                desenvolvimento integral.</p>
+                        </div>
+                        <!-- Ensino Médio -->
+                        <div class="segmento-card" style="--segmento-cor:#d7903c;">
+                            <h3 class="segmento-nome">Ensino Médio</h3>
+                            <p class="segmento-descricao">Preparação para o ENEM e vestibulares, com ênfase em autonomia
+                                e pensamento crítico.</p>
+                        </div>
+                        <!-- Período Integral -->
+                        <div class="segmento-card" style="--segmento-cor:#3962db;">
+                            <h3 class="segmento-nome">Período Integral</h3>
+                            <p class="segmento-descricao">Programação completa para atender às necessidades dos alunos e
+                                suas famílias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <div class="cta-texto">
+                <h3 class="cta-titulo">Juntos, vamos construir o caminho para o sucesso do seu filho!</h3>
+                <p class="cta-descricao">Proporcione a melhor educação, em um ambiente que estimula o
+                    desenvolvimento integral. Inscreva seu filho agora e faça parte dessa jornada de aprendizado e
+                    crescimento!</p>
+            </div>
+            <div>
+                <a href="#inscricao" class="botao">Inscreva-se Agora</a>
+            </div>
+        </div>
+
+
+        <section class="diferenciais" id="diferencial">
+            <h2 class="diferenciais-titulo">Nossos Diferenciais</h2>
+            <div class="borda"></div>
+        
+            <div class="diferenciais-container">
+                    <div class="diferenciais-item">
+                        <img src="imagens/canto.png" alt="Aulas de Canto">
+                        <h3>Aulas de Canto</h3>
+                        <p>Desenvolvemos o talento musical dos alunos.</p>
+                    </div>
+                    <div class="diferenciais-item">
+                        <img src="imagens/danca.png" alt="Dança">
+                        <h3>Dança</h3>
+                        <p>Atividades que promovem a expressão corporal.</p>
+                    </div>
+                    <div class="diferenciais-item">
+                        <img src="imagens/luta.png" alt="Artes Marciais">
+                        <h3>Artes Marciais</h3>
+                        <p>Disciplinas focadas na autodefesa e controle.</p>
+                    </div>
+                    <div class="diferenciais-item">
+                        <img src="imagens/linguagem.png" alt="Inglês">
+                        <h3>Inglês</h3>
+                        <p>Aprimoramento do idioma para o futuro.</p>
+                    </div>
+                    <div class="diferenciais-item">
+                        <img src="imagens/linguagem.png" alt="Espanhol">
+                        <h3>Espanhol</h3>
+                        <p>Conectando os alunos com a cultura hispânica.</p>
+                    </div>
+                    <div class="diferenciais-item">
+                        <img src="imagens/linguagem.png" alt="Mandarim">
+                        <h3>Mandarim</h3>
+                        <p>Língua essencial para o mercado global.</p>
+                    </div>
+                    <div class="diferenciais-item">
+                        <img src="imagens/festa.png" alt="Festas Sazonais">
+                        <h3>Festas Sazonais</h3>
+                        <p>Momentos de confraternização.</p>
+                    </div>
+        
+            </div>
+        </section>
+
+        <section class="contatos" id="contatos">
+            <div class="contatos-container">
+              <!-- Título da seção -->
+              <div class="contatos-header">
+                <h2 class="contatos-titulo">Contato</h2>
+                <p class="contatos-subtitulo">Ficou com alguma dúvida? Entre em contato conosco!</p>
+              </div>
+          
+              <!-- Formulário e informações de contato -->
+              <div class="contatos-content">
+                <form class="contatos-form" action="">
+                  <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva uma mensagem...."></textarea>
+                  </div>
+                  <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+          
+                <!-- Informações de endereço e contato -->
+                <div class="contatos-info">
+                  <div class="contatos-endereco">
+                    <h3>Endereço</h3>
+                    <p>Rua Fictícia, 123 - CEP 12345-678</p>
+                  </div>
+                  <div class="contatos-detalhes">
+                    <h3>Contato</h3>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>WhatsApp: (11) 91234-5678</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Mapa -->
+              <div class="contatos-mapa">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31656393.254779518!2d-51.316680000000005!3d-14.40952615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1689264926490!5m2!1spt-BR!2sbr"
+                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </section>
+          
+        
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape_sociais">
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-carlos-de-almeida-silva-724579171/" target="_blank"><img
+                    src="imagens/icon-linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Jo4ocarlos" target="_blank"><img src="imagens/icon-github.png" alt="GitHub"></a>
+        </div>
+        <p class="rodape_direitos">&copy; 2024 - João Carlos. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
